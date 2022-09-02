@@ -1,73 +1,58 @@
 <style>
 
     html {
-        font-size: 62.5%;
-        overflow-x: hidden;
-        min-wdith: 700px;
-       
+        font-size: 60%;
+        
     }
 
     body {
+        
         background-color: rgb(2, 5, 27);
         color: linen;
-        width: 100%;
-        min-wdith: 700px;
-
     }
 
     #navbar {
         position: fixed;
-        overflow: hidden;
-        right: 0;
         top: 0;
+        left: 0;
+        overflow: hidden;   
         background-color: rgb(2, 5, 27);
         width: 100%;
-        height: 80px;
-        z-index: 100000;
-
+        z-index: 100000;  
     }
 
-    .nav-list {
-        display: flex;
-        background-color: rgb(2, 5, 27);
-        text-align: center;
-        padding: 14px 16px;
+    .nav {
+        padding: 13px 15px;
         text-decoration: none;
         color: linen;
-        float: right;
-
+ 
     }
 
     nav>ul>li {
-        font-size: 3rem;
+        font-size: 2.5rem;
         list-style-type: none;
         color: linen;
-        margin-left: 2rem;
-        margin-right: 2rem;
-               
+        display: block;
+        float: left;
+        padding: 14px 16px;      
     }
 
-    li a {
+    nav a {
         color: linen;
         text-decoration: none;
 
     }
 
-    li a:hover {
+   nav a:hover {
         cursor: pointer;
         background-color: rgb(76, 164, 194);
-        border-radius: 50%;
+        border-radius: 60%;
+        
     }
 
     #welcome-section {
-        width: 100%;
         height: 100vh;
-        position: relative;
-        margin: 1rem;
-    }
-
-    .main {
-        margin-top: 30px;
+        margin-top: 3rem;
     }
 
     .left {
@@ -78,12 +63,13 @@
 
     #profile-img {
         opacity: 0.5;
-        width: 80%;
+        width: 70%;
+        margin-top: 6rem;
     }
 
     .intro {
         position: relative;
-        top: 5rem;
+        top: 4rem;
         margin-top: 2rem;
 
     }
@@ -92,10 +78,13 @@
         position: absolute;
         text-align: left;
         display: flex-end;
-        left: 60%;
+        left: 55%;
 
     }
 
+    .resume{
+        margin-top: -1rem;
+    }
 
     h1,
     h2,
@@ -104,41 +93,40 @@
     p,
     span {
         color: linen;
-        position: relative;
         font-family: 'Roboto', sans-serif;
-        margin: 1.5rem;
+        margin: 1rem;
         left: 0;
-
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 2.5rem;
         position: absolute;
         top: 80%;
-        left: 2%;
+        left: 1%;
         z-index: 10000;
         font-weight: bolder;
     }
 
     h2 {
-        font-size: 3rem;
-        font-weight: bolder;
+        font-size: 2.2rem;
+        
     }
 
     h3 {
+        margin-top: 4rem;
         font-size: 2rem;
         font-weight: bold;
     }
 
     p {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
 
     }
 
     
     #contact {
-        margin-top: 8rem;
+        margin-top: 2.2rem;
         color: linen;
 
     }
@@ -146,13 +134,12 @@
     table,
     th,
     td {
-        border: 1px solid white;
-        border-collapse: collapse;
-        font-size: 2rem;
-        line-height: 3rem;
+        border: 1px solid white;   
+        font-size: 1.3rem;
+        line-height: 2rem;
         text-align: center;
-        margin: 2rem;
-        padding: 2rem;
+        margin: 1rem;
+        padding: 1rem;
     }
 
     table{
@@ -160,52 +147,121 @@
     }
 
     #projects{
-        margin-top: 10rem;
+        margin-top: 6rem;
         font-size: 1.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         height: 400px;
+        display: inline-block;
     }
    
     #projects>ul>li{
         list-style: none;
-        position: relative;
-        width: 33.3%;
-        min-width: 600px;
+        width: 100%;
+        min-width: 350px;
         margin-top: 3rem;
-        display: inline-block;
         height: 300px;
+        padding: auto 3rem;
     }
+    .column {
+        float: left;
+        width: 32%;
+        padding: 5px;
+      }
+      
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+ 
 
-    @media (max-width: 1320px){
+    
+    @media (max-width: 1024px){
         .resume{
-        position: relative;
-        top: -14rem;
+        margin-top: -28rem;
     }
 
-    .project-img{
-        position: relative;
-        transform: scale(0.6);
-        margin-left: -30rem;
-        margin-top: -15rem;
-        
-    }
-
-    @media (max-width: 900px){
-        .resume{
-        position: relative;
-        margin-top: 10rem;
-    }
-
-    .project-img{
-        position: relative;
-        transform: scale(0.3);
-        margin-left: -60rem;
-        margin-top: -42rem;
+         .left{
+             margin-top: 10rem;
         
     }
 
     }
-}
+
+    @media (max-width: 768px){
+        h1{
+            font-size: 1.8rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        h3{
+            font-size: 1.2rem;
+        }
+        h4{
+            font-size: 1.2rem;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .resume{
+        margin-top: 20rem;
+    }
+
+    .left{
+        transform: scale(1.6);
+        margin-left: 15rem;
+           
+    }
+
+    .right{
+        width: 100%;
+        margin-top: 40rem;
+        margin-left: -26rem;
+           
+    }
+
+    @media (max-width: 414px){
+        h1{
+            font-size: 1.8rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        h3{
+            font-size: 1.2rem;
+        }
+        h4{
+            font-size: 1.2rem;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .resume{
+        margin-top: 30rem;
+    }
+
+    .left{
+        transform: scale(2.5);
+        margin-left: 15rem;
+           
+    }
+
+    .right{
+        width: 32rem;
+        margin-top: 35rem;
+        margin-left: -13rem;
+           
+    }
+
+    
+
+    }
+
 
   
 </style>
